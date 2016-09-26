@@ -1,0 +1,57 @@
+http://marcio.io/2015/07/supercharging-atom-editor-for-go-development/
+https://testerhome.com/topics/3728
+https://github.com/nsf/gocode search lib-path
+
+
+go get -u github.com/alecthomas/gometalinter  -- yes
+
+go get -u github.com/nsf/gocode   -- yes
+
+go get -u golang.org/x/tools/cmd/cover  go install
+
+
+
+lib-path
+
+A string option. Allows you to add search paths for packages. By default, gocode only searches $GOPATH/pkg/$GOOS_$GOARCH and $GOROOT/pkg/$GOOS_$GOARCH in terms of previously existed environment variables. Also you can specify multiple paths using ':' (colon) as a separator (on Windows use semicolon ';'). The paths specified by lib-path are prepended to the default ones.
+
+➜  ~ go env
+GOARCH="amd64"
+GOBIN=""
+GOEXE=""
+GOHOSTARCH="amd64"
+GOHOSTOS="darwin"
+GOOS="darwin"
+GOPATH="/Users/arashicage/workspace/gopath:/Users/arashicage/workspace/gocode.1:/Users/arashicage/workspace/gocode.2"
+GORACE=""
+GOROOT="/Users/arashicage/workspace.env/go-1.6.3"
+GOTOOLDIR="/Users/arashicage/workspace.env/go-1.6.3/pkg/tool/darwin_amd64"
+GO15VENDOREXPERIMENT="1"
+CC="clang"
+GOGCCFLAGS="-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fno-common"
+CXX="clang++"
+CGO_ENABLED="1"
+
+➜  ~ echo $GOROOT/pkg/$GOOS_$GOARCH
+/Users/arashicage/workspace.env/go-1.6.3/pkg/
+
+添加
+GOOS="darwin"
+GOARCH="amd64"
+
+echo $GOROOT/pkg/$GOOS_$GOARCH
+/Users/arashicage/workspace.env/go-1.6.3/pkg/amd64
+
+
+
+
+method 1:
+
+一定是 gocode 将变量 $GOOS_
+
+添加 GOOS_="darwin_"
+
+still not work
+
+method 2:
+gocode set lib-path "/Users/arashicage/workspace.env/go-1.6.3/pkg/darwin_amd64"

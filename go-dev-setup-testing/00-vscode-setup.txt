@@ -1,0 +1,44 @@
+http://fuxiaohei.me/2016/6/24/go-start-up.html
+
+Installing 7 missing tools
+  gopkgs
+  godef
+  golint
+  go-outline
+  go-symbols
+  guru
+  gorename
+
+Installing gopkgs SUCCEEDED
+Installing godef SUCCEEDED
+Installing golint FAILED
+Installing go-outline SUCCEEDED
+Installing go-symbols FAILED
+Installing guru FAILED
+Installing gorename FAILED
+
+4 tools failed to install.
+
+golint:
+Error: Command failed: go get -u -v github.com/golang/lint/golint
+github.com/golang/lint (download)
+package golang.org/x/tools/go/gcimporter15: directory "/Users/arashicage/workspace/gopath/src/golang.org/x/tools/go/gcimporter15" is not using a known version control system
+github.com/golang/lint (download)
+package golang.org/x/tools/go/gcimporter15: directory "/Users/arashicage/workspace/gopath/src/golang.org/x/tools/go/gcimporter15" is not using a known version control system
+
+go-symbols:
+Error: Command failed: go get -u -v github.com/newhook/go-symbols
+github.com/newhook/go-symbols (download)
+package golang.org/x/tools/go/buildutil: directory "/Users/arashicage/workspace/gopath/src/golang.org/x/tools/go/buildutil" is not using a known version control system
+github.com/newhook/go-symbols (download)
+package golang.org/x/tools/go/buildutil: directory "/Users/arashicage/workspace/gopath/src/golang.org/x/tools/go/buildutil" is not using a known version control system
+
+guru:
+Error: Command failed: go get -u -v golang.org/x/tools/cmd/guru
+package golang.org/x/tools/cmd/guru: directory "/Users/arashicage/workspace/gopath/src/golang.org/x/tools/cmd/guru" is not using a known version control system
+package golang.org/x/tools/cmd/guru: directory "/Users/arashicage/workspace/gopath/src/golang.org/x/tools/cmd/guru" is not using a known version control system
+
+gorename:
+Error: Command failed: go get -u -v golang.org/x/tools/cmd/gorename
+package golang.org/x/tools/cmd/gorename: directory "/Users/arashicage/workspace/gopath/src/golang.org/x/tools/cmd/gorename" is not using a known version control system
+package golang.org/x/tools/cmd/gorename: directory "/Users/arashicage/workspace/gopath/src/golang.org/x/tools/cmd/gorename" is not using a known version control system

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+
+      <div>
+        <form action="/x" method="post">
+          
+          <div class="ui attached segment">
+
+            <div class="inline field">
+              <label></label>
+              {{.Captcha.CreateHtml}}
+            </div>
+            <div>
+              <label for="captcha">验证码</label>
+              <input id="captcha" name="captcha" value="{{.captcha}}" autocomplete="off">
+            </div>
+
+            <div>
+              <label></label>
+              <button>创建用户</button>
+            </div>
+            
+          </div>
+        </form>
+      </div>
+
+
+  
+</body>
+</html>
+
